@@ -1,0 +1,16 @@
+type Query {
+  orders(userId: ID!): [Order]
+}
+
+type Order {
+  id: ID!
+  product: String
+  quantity: Int
+  userId: ID!
+}
+
+extend type User @key(fields: "id") {
+  id: ID! @external
+  orders: [Order] @requires(fields: "id")
+}
+

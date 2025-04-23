@@ -1,0 +1,17 @@
+server:
+  port: 8081
+
+spring:
+  graphql:
+    schema:
+      locations: classpath:/schema/
+
+dgs:
+  graphql:
+    federation:
+      enabled: true
+
+logging:
+  level:
+    com.netflix.graphql.dgs.federation: DEBUG
+    com.netflix.graphql.dgs.webmvc: DEBUG 

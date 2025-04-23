@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  graphql:
+    schema:
+      locations: classpath:/nowhere/ # disable local schema loading
+
+dgs:
+  graphql:
+    federation:
+      enabled: true
+      services:
+        - name: user-service
+          url: http://user-service:8080/graphql
+        - name: order-service
+          url: http://order-service:8081/graphql
+
+logging:
+  level:
+    com.netflix.graphql.dgs.federation: DEBUG
+    com.netflix.graphql.dgs.webmvc: DEBUG
