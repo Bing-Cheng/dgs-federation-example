@@ -8,13 +8,14 @@ spring:
 
 dgs:
   graphql:
+    schema-locations: []
     federation:
       enabled: true
       services:
         - name: user-service
-          url: http://user-service:8080/graphql
+          url: http://localhost:8081/graphql
         - name: order-service
-          url: http://order-service:8081/graphql
+          url: http://localhost:8082/graphql
 
 logging:
   level:

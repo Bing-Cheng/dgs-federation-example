@@ -12,7 +12,7 @@ public class UserResolver {
     }
 
     @DgsQuery
-    public User user(@InputArgument String id) {
-        return new User(id, "Alice");
+    public User user(@InputArgument(name = "id") String id) {
+        return new User(id != null ? id : "default-id", "Alice");
     }
 }

@@ -14,7 +14,8 @@ repositories {
 
 dependencies {
     implementation platform("com.netflix.graphql.dgs:graphql-dgs-platform-dependencies:7.5.4")
-    implementation 'com.netflix.graphql.dgs:graphql-dgs-spring-boot-starter'
+    implementation 'com.netflix.graphql.dgs:graphql-dgs-gateway:latest.release'
+    implementation 'com.netflix.graphql.dgs:graphql-dgs-federation'
     implementation 'org.springframework.boot:spring-boot-starter-web'
 }
 
